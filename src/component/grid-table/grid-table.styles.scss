@@ -1,0 +1,97 @@
+.grid-table {
+  display: grid;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+  align-items: top;
+  background: rgba(#fafafa, 0.9);
+  border-radius: 0.5rem;
+
+  &-row {
+    display: grid;
+    grid-template-columns: minmax(max-content, 1fr) repeat(3, 1fr) minmax(max-content, 120px);
+    border-top: 0.25px solid #dfe6e9;
+    border: 1px solid #eeeeee;
+
+    &:first-child {
+      border-radius: 0.5rem 0.5rem 0 0;
+      background: rgba(#ccc, 0.5);
+      font-weight: bold;
+      text-shadow: 0 2px 1px #fff;
+
+    }
+  }
+
+  &-header {
+    background-color: #dfe6e9;
+  }
+
+  &-cell {
+    padding: 10px;
+    border-bottom: 1.5px solid #f5f5f5;
+
+    &.status::before {
+      display: inline-block;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 15px;
+      margin-right: 2rem;
+      content: '';
+    }
+
+    &__header {
+      background-color: #eeeeee;
+      height: 1.5rem;
+      padding-top: 0.25rem;
+      padding-left: 2rem;
+      font-size: 10px;
+
+      &--button {
+        background-color: #eeeeee;
+      }
+    }
+
+    &--button {
+      padding-top: 0.35rem;
+      border-bottom: 1.5px solid #f5f5f5;
+    }
+
+    &.rejected::before {
+      background-color: #d63031;
+    }
+
+    &.completed::before {
+      background-color: #55efc4;
+    }
+
+    &.inprocess::before {
+      background-color: #fdcb6e;
+    }
+
+    &.rejected::before {
+      background-color: #d63031;
+    }
+
+    &:first-child {
+      color: black;
+    }
+  }
+
+}
+
+button {
+
+  &.mn-button {
+    margin-left: 2rem;
+    border-radius: 1.5rem;
+    height: 1.75rem;
+    width: 5rem;
+    cursor: pointer;
+    background-color: #dfe6e9;
+    border-color: #dfe6e9;
+
+    &:hover {
+      background-color: #74b9ff;
+      color: white;
+    }
+  }
+}

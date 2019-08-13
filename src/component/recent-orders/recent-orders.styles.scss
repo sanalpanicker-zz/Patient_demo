@@ -1,0 +1,10 @@
+.recent_orders {
+    display: grid;
+    text-align: left;
+    color: #636e72;
+    justify-content: center;
+
+    &__header {
+        padding: 1rem;
+    }
+}
